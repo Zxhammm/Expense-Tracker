@@ -1,67 +1,125 @@
-# Expense Tracker DApp (Stellar Soroban)
+# Stellar Notes DApp
 
-**Expense Tracker DApp** adalah aplikasi pencatatan keuangan terdesentralisasi berbasis blockchain Stellar menggunakan Soroban SDK. Aplikasi ini memungkinkan pengguna untuk mencatat pemasukan dan pengeluaran secara transparan, aman, dan tidak dapat dimodifikasi secara sepihak.
-
----
-
-## Deskripsi Proyek
-
-Expense Tracker DApp dibangun menggunakan smart contract Soroban (Rust) dan frontend React. Sistem ini menyimpan data keuangan pengguna langsung di blockchain Stellar, sehingga semua transaksi bersifat transparan, permanen, dan terverifikasi.
-
-Setiap pengguna memiliki data keuangan masing-masing yang dipisahkan berdasarkan address wallet, sehingga privasi dan kepemilikan data tetap terjaga.
+**Stellar Notes DApp** - Blockchain-Based Decentralized Note-Taking System
 
 ---
 
-## Visi Proyek
+## Project Description
 
-Kami bertujuan untuk menciptakan sistem manajemen keuangan yang:
+Stellar Notes DApp is a decentralized smart contract application built on the Stellar blockchain using the Soroban SDK. It provides a secure and immutable platform for managing personal notes directly on-chain. All data is stored transparently and can only be accessed or modified through predefined smart contract functions, removing reliance on centralized database systems.
 
-- **Terdesentralisasi**: Tidak bergantung pada server pusat
-- **Transparan**: Semua data tercatat di blockchain
-- **Aman**: Data hanya dapat diakses oleh pemilik wallet
-- **Immutable**: Data tidak dapat diubah oleh pihak lain
-- **Sederhana**: Mudah digunakan untuk pencatatan harian
-
-Dengan ini, pengguna dapat memiliki kontrol penuh atas data keuangan mereka.
+The system enables users to create, retrieve, and delete notes using the efficiency of the Stellar network. Each note is uniquely identified and stored in the contract’s instance storage, ensuring persistence, integrity, and reliability.
 
 ---
 
-## Fitur Utama
+## Project Vision
 
-### 1. Manajemen Pengeluaran
-- Menambahkan pemasukan dan pengeluaran
-- Menyimpan judul, jumlah, dan kategori
-- Kategori: Food, Transport, Shopping, Salary, Other
+Our vision is to revolutionize personal productivity in the digital era by:
 
-### 2. Penyimpanan Blockchain
-- Data disimpan di Stellar Soroban
-- Setiap user memiliki data terpisah berdasarkan wallet address
-- Counter ID otomatis untuk setiap transaksi
+- **Decentralizing Data**: Moving note storage from centralized servers to a distributed blockchain network
+- **Ensuring Ownership**: Giving users full control and ownership of their digital information
+- **Guaranteeing Immutability**: Ensuring notes cannot be tampered with by any third party
+- **Enhancing Privacy**: Leveraging blockchain security to protect user data
+- **Building Trustless Systems**: Relying on code-based guarantees rather than centralized authorities
 
-### 3. Pengambilan Data
-- Menampilkan seluruh transaksi pengguna
-- Data real-time dari smart contract
-- Sinkronisasi langsung dengan blockchain
-
-### 4. Penghapusan Data
-- Menghapus transaksi berdasarkan ID
-- Update langsung ke storage blockchain
-
-### 5. Wallet Integration
-- Login menggunakan wallet Stellar
-- Autentikasi menggunakan `require_auth()`
-- Data hanya bisa diakses pemilik wallet
+We aim to create a future where digital information is sovereign, transparent, and user-controlled.
 
 ---
 
-## Smart Contract
+## Key Features
 
-### Struktur Data Expense
+### 1. Note Management
+- Create notes with title and content
+- Automatic unique ID generation
+- Stored permanently on the Stellar blockchain
 
-```rust
-pub struct Expense {
-    pub id: u64,
-    pub title: String,
-    pub amount: i64,
-    pub category: String,
-}
+### 2. Data Retrieval
+- Fetch all notes in a single contract call
+- Structured response for frontend integration
+- Real-time synchronization with blockchain state
+
+### 3. Secure Deletion
+- Delete notes by unique ID
+- Immediate update of contract storage
+- Permanent removal from blockchain state
+
+### 4. Transparency & Security
+- All actions recorded on-chain
+- Immutable transaction history
+- Protection against unauthorized modifications
+
+### 5. Stellar Integration
+- Built on Soroban Smart Contract SDK
+- Fast and low-cost blockchain operations
+- Scalable architecture for future growth
+
+---
+
+## Contract Details
+
+- **Contract Address**:  
+  `CAWLJENIINEZJFQFC5VCB6VNRVJGSXO2L7DORGXLDNVBKT26RRHTUQFJ`
+
+![Smart Contract](smartcontract.png)
+
+---
+
+## Frontend Preview
+
+![Frontend Preview](frontend.png)
+
+---
+
+## Future Scope
+
+### Short-Term Enhancements
+- Note encryption for enhanced privacy
+- Tags and categories for organization
+- Markdown / rich text support
+- Advanced search functionality
+
+### Medium-Term Development
+- Collaborative notes with multi-signature access
+- Notification system for updates
+- Asset/token attachments to notes
+- Inter-contract communication support
+
+### Long-Term Vision
+- Cross-chain note synchronization
+- Decentralized frontend hosting (IPFS)
+- AI-powered note summarization
+- Zero-knowledge privacy layers
+- DAO-based governance system
+- Decentralized identity (DID) integration
+
+### Enterprise Features
+- Corporate documentation system
+- Immutable audit logging
+- Automated reporting triggers
+- Multi-language support
+
+---
+
+## Technical Requirements
+
+- Rust programming language
+- Soroban SDK
+- Stellar blockchain network
+
+---
+
+## Getting Started
+
+Deploy and interact with the smart contract using the following functions:
+
+- `create_note(title, content)` → Create a new note
+- `get_notes()` → Retrieve all stored notes
+- `delete_note(id)` → Delete a note by ID
+
+---
+
+## Summary
+
+**Stellar Notes DApp** brings secure, transparent, and decentralized note-taking to the blockchain era—ensuring your thoughts remain truly yours.
+
+---
