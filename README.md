@@ -100,8 +100,20 @@ We envision a system that is:
 
 ---
 
-## Smart Contract Overview
+## Contract Details
 
+- **Contract Address**:  
+  `CA4I47KYOIAXI452PMM4BBZKKLHHPSCYCRA2DVJZYTUBQVZ2CP5JOWGB`
+
+![Smart Contract](smartcontract.png)
+
+---
+
+## Frontend Preview
+
+![Frontend Preview](frontend.png)
+
+---
 ### Data Structure
 
 ```rust
